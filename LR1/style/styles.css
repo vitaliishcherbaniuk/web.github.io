@@ -1,0 +1,40 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+button {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    padding: 15px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Темніший зелений при наведенні */
+}
+
+/* Блок результатів */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff; /* Білий фон */
+    border: 1px solid #ccc; /* Сірий контур */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
