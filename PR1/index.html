@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Підключення DM Sans з Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Register Form</title>
+</head>
+<body>
+
+    <div class="register-form">
+        <h2>Register Form</h2>
+        <p>Phasellus feugiat est sed mi semper, vitae consectetur diam lacinia.</p>
+        
+        <div class="name-container">
+            <input class="first-name" type="text" placeholder="First Name">
+            <input class="surname" type="text" placeholder="Surname">
+        </div>
+        
+        <input type="text" placeholder="Mobile number or email address">
+        <input type="password" placeholder="New Password">
+        
+        <div class="dob">
+            <label>Date of birth</label>
+            <div class="dob-container">
+                <select>
+                    <option>27</option>
+                </select>
+                <select>
+                    <option>Nov</option>
+                </select>
+                <select>
+                    <option>2022</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="gender">
+            <label class="gender-option">Female<input type="radio" name="gender" value="female"></label>
+            <label class="gender-option">Male<input type="radio" name="gender" value="male"></label>
+            <label class="gender-option">Custom<input type="radio" name="gender" value="custom"></label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox"> 
+            <label>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I have read the <a href="#">KVKK Clarification Text</a> and I accept the processing of my personal data in accordance with the <a href="#">Explicit Consent Text</a>.</label>
+        </div>
+
+        <button class="btn">Sign Up</button>
+    </div>
+
+</body>
+</html>
