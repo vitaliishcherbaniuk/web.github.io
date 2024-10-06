@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналіз даних книги</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Аналіз даних книги</h1>
+
+    <div>
+        <h2>Непрочитані книги</h2>
+        <button onclick="showUnreadBooks()">Отримати непрочитані книги</button>
+        <ul id="unreadBooksList"></ul>
+    </div>
+
+    <div>
+        <h2>Книги автора</h2>
+        <input type="text" id="authorName" placeholder="Введіть ім'я автора">
+        <button onclick="showBooksByAuthor()">Пошук книг за автором</button>
+        <ul id="booksByAuthorList"></ul>
+    </div>
+
+    <div>
+        <h2>Книги з найвищим рейтингом</h2>
+        <button onclick="showTopRatedBooks()">Отримати книги з найвищим рейтингом</button>
+        <ul id="topRatedBooksList"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

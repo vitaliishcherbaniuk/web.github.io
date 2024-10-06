@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук і фільтр продукту</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Пошук і фільтр продукту</h1>
+
+    <div>
+        <h2>Доступні продукти</h2>
+        <button onclick="showAvailableProducts()">Показати доступні продукти</button>
+        <ul id="availableProductsList"></ul>
+    </div>
+
+    <div>
+        <h2>Знайдіть продукт за назвою</h2>
+        <input type="text" id="productName" placeholder="Введіть назву продукту">
+        <button onclick="searchProduct()">Знайти товар</button>
+        <p id="productResult"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
