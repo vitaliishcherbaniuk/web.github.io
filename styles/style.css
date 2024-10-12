@@ -1,54 +1,89 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Додано простий фоновий колір */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 header {
-    background-color: #274236;
-    color: #fff;
-    padding: 10px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px;
 }
 
 .left-side,
 .right-side {
-    width: 20%;
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .button {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 .button li {
     margin-bottom: 15px;
 }
 
-.button li a {
-    display: inline-block;
-    width: 300px;
-    padding: 15px;
+.button a {
     text-decoration: none;
-    background-color: #274236;
-    color: #fff;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 15px 20px;
+    display: block;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.buttons li a:hover {
-    background-color: #1b2d21;
+.button a:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side,
+    .right-side {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
