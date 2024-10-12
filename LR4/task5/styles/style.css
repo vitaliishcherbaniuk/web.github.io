@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.captcha-container {
+    text-align: center;
+}
+
+.captcha-display {
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.result-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.result-message.success {
+    color: green;
+}
+
+.result-message.error {
+    color: red;
+}

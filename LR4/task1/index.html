@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер Температури</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Конвертер Температури</h1>
+            <label for="fahrenheit">Температура за Фаренгейтом:</label>
+            <input type="text" id="fahrenheit" oninput="convertToFahrenheit()" placeholder="Введіть Фаренгейти">
+
+            <label for="celsius">Температура за Цельсієм:</label>
+            <input type="text" id="celsius" oninput="convertToCelsius()" placeholder="Введіть Цельсії">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

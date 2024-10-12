@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <label for="captchaInput">Введіть число</label>
+        <div id="captchaDisplay" class="captcha-display"></div>
+        <input type="text" id="captchaInput" placeholder="Введіть тут">
+        <button onclick="checkCaptcha()">Перевірити</button>
+        <div id="resultMessage" class="result-message"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
