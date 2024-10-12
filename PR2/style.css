@@ -1,50 +1,76 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 header {
-    background-color: #274236;
-    color: #fff;
-    padding: 10px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-}
-
-.left-side,
-.right-side {
-    width: 20%;
+    margin-top: 30px;
 }
 
 .buttons {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .buttons li {
-    margin-bottom: 15px;
+    margin: 10px;
 }
 
-.buttons li a {
-    display: inline-block;
-    width: 300px;
-    padding: 15px;
+.buttons a {
     text-decoration: none;
-    background-color: #274236;
-    color: #fff;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 15px 30px;
+    display: block;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.buttons a:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons li {
+        width: 100%;
+    }
+
+    .buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
