@@ -1,10 +1,10 @@
 // Масив об'єктів книг
 const books = [
-    { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951, rating: 4.5, isRead: true },
-    { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, rating: 4.9, isRead: false },
-    { title: "1984", author: "George Orwell", year: 1949, rating: 4.8, isRead: true },
-    { title: "Brave New World", author: "Aldous Huxley", year: 1932, rating: 4.6, isRead: false },
-    { title: "Moby Dick", author: "Herman Melville", year: 1851, rating: 4.2, isRead: false },
+    { title: "Над прірвою у житі", author: "Джером Селінджер", year: 1951, rating: 4.5, isRead: true },
+    { title: "Вбити пересмішника", author: "Гарпер Лі", year: 1960, rating: 4.9, isRead: false },
+    { title: "1984", author: "Джордж Орвелл", year: 1949, rating: 4.8, isRead: true },
+    { title: "Який чудесний світ новий!", author: "Олдос Гакслі", year: 1932, rating: 4.6, isRead: false },
+    { title: "Мобі Дік", author: "Герман Мелвілл", year: 1851, rating: 4.2, isRead: false },
 ];
 
 // Функція для отримання непрочитаних книг
