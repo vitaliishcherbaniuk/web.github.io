@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workout Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад тренувань</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <h1>Розклад тренувань</h1>
-  <div id="workout-schedule"></div>
+    <h1>Розклад тренувань</h1>
+    <div class="form-container">
+        <h2>Додати нове тренування</h2>
+        <form id="trainingForm" onsubmit="addTraining(event)">
+            <label for="training-type">Вид тренування:</label>
+            <input type="text" id="training-type" name="training-type" required>
 
-  
-  <script src="js/script.js"></script>
+            <label for="duration">Тривалість (хв):</label>
+            <input type="number" id="duration" name="duration" required>
+
+            <label for="difficulty">Рівень складності:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="легкий">Легкий</option>
+                <option value="середній">Середній</option>
+                <option value="складний">Складний</option>
+            </select>
+
+            <label for="completed">Виконано:</label>
+            <input type="checkbox" id="completed" name="completed">
+
+            <button type="submit">Додати тренування</button>
+        </form>
+    </div>
+
+    <h2>Список тренувань</h2>
+    <ul id="trainingList"></ul>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
