@@ -39,7 +39,7 @@ function showGroupedStudents() {
         const studentList = document.createElement('ul');
         groupedStudents[group].forEach(student => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${student.name} - Age: ${student.age} - Grade: ${student.grade}`;
+            listItem.textContent = `${student.name} - Вік: ${student.age} - Оцінка: ${student.grade}`;
             studentList.appendChild(listItem);
         });
 
@@ -57,7 +57,7 @@ function showSortedStudents() {
 
     sortedStudents.forEach(student => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${student.name} - Age: ${student.age} - Grade: ${student.grade}`;
+        listItem.textContent = `${student.name} - Вік: ${student.age} - Оцінка: ${student.grade}`;
         sortedStudentsList.appendChild(listItem);
     });
 }
