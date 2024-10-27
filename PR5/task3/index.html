@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Індивідуальне завдання 3</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Останній день місяця</h2>
+        <div class="input-group">
+            <label for="year">Введіть рік:</label>
+            <input type="number" id="year" placeholder="Наприклад, 2020">
+        </div>
+        <div class="input-group">
+            <label for="month">Введіть місяць (0 - січень, 1 - лютий, ...):</label>
+            <input type="number" id="month" placeholder="Від 0 до 11">
+        </div>
+        <button onclick="showLastDayOfMonth()">Показати останній день місяця</button>
+        
+        <div id="last-day-output"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
