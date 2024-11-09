@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Generator</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>CSS generator</h1>
+    
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'border-radius')" id="defaultOpen">border-radius</button>
+        <button class="tablink" onclick="openTab(event, 'transition-duration')">transition-duration</button>
+        <button class="tablink" onclick="openTab(event, 'transition-property')">transition-property</button>
+    </div>
+    
+    <!-- Вкладка border-radius -->
+    <div id="border-radius" class="tabcontent">
+        <div>Верхній лівий радіус:
+            <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="ttl" value="0">
+        </div>
+        <div>Верхній правий радіус:
+            <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="ttr" value="0">
+        </div>
+        <div>Нижній правий радіус:
+            <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="tbr" value="0">
+        </div>
+        <div>Нижній лівий радіус:
+            <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="tbl" value="0">
+        </div>
+    </div>
+
+    <!-- Вкладка transition-duration -->
+    <div id="transition-duration" class="tabcontent">
+        <div>Transition Duration:
+            <input type="number" id="durationValue" min="0" step="0.1" value="1" oninput="generate()"> 
+            <select id="durationUnit" onchange="generate()">
+                <option value="s">Seconds</option>
+                <option value="ms">Milliseconds</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Вкладка transition-property -->
+    <div id="transition-property" class="tabcontent">
+        <div>Transition Property:
+            <select id="property" onchange="generate()">
+                <option value="all">All</option>
+                <option value="background">Background</option>
+                <option value="color">Color</option>
+                <option value="height">Height</option>
+                <option value="width">Width</option>
+                <option value="outline">Outline</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="block"></div>
+    
+    <div>
+        <label for="cssCode">Code:</label>
+        <textarea id="cssCode" rows="4" cols="50" readonly></textarea>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
