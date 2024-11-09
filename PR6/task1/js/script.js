@@ -74,6 +74,54 @@ function displayError(error) {
 document.addEventListener('DOMContentLoaded', () => {
     getMyLocation();
 
-    // Додаємо обробник події для кнопки переходу до пункту призначення
+    // Додаємо обробники подій для кнопок
+    document.getElementById("watch").onclick = watchLocation;
+    document.getElementById("clearWatch").onclick = clearWatch;
     document.getElementById("goToDestination").onclick = goToDestination;
 });
+
+// Функція для ініціалізації початкового місцезнаходження
+function getMyLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(displayLocation, displayError);
+    } else {
+        alert("Geolocation not supported by your browser.");
+    }
+}
+
+// Відображення початкового місцезнаходження та відстані до Коледжу
+function displayLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let div = document.getElementById("location");
+    div.innerHTML = `You are at Latitude: ${latitude}, Longitude: ${longitude}`;
+
+    let km = computeDistance(position.coords, ourCoords);
+    let distance = document.getElementById("distance");
+    distance.innerHTML = `You are ${km.toFixed(2)} km from the College`;
+
+    // Ініціалізуємо карту тільки при початковому визначенні місцезнаходження
+    if (!map) {
+        initMap(latitude, longitude);
+    }
+}
+
+// Обчислення відстані між двома координатами
+function computeDistance(startCoords, destCoords) {
+    let startLatRads = degreesToRadians(startCoords.latitude);
+    let startLongRads = degreesToRadians(startCoords.longitude);
+    let destLatRads = degreesToRadians(destCoords.latitude);
+    let destLongRads = degreesToRadians(destCoords.longitude);
+    let Radius = 6371; // Радіус Землі в км
+
+    let distance = Math.acos(Math.sin(startLatRads) * Math.sin(destLatRads) +
+                    Math.cos(startLatRads) * Math.cos(destLatRads) *
+                    Math.cos(startLongRads - destLongRads)) * Radius;
+
+    return distance;
+}
+
+// Конвертація градусів у радіани
+function degreesToRadians(degrees) {
+    return (degrees * Math.PI) / 180;
+}
