@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Список товарів</title>
+</head>
+<body>
+    <header>
+        <h1>Категорія товарів: Телевізори</h1>
+        <div class="cart-icon" onclick="openCart()">
+            <img src="cart-icon.png" alt="Корзина">
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+    <main>
+        <div class="product-card">
+            <img src="tv1.png" alt="Телевізор Samsung">
+            <h2>Телевізор Samsung</h2>
+            <p>Ціна: 15000 грн</p>
+            <button onclick="addToCart('Телевізор Samsung', 15000)">Додати у корзину</button>
+        </div>
+        <div class="product-card">
+            <img src="tv2.png" alt="Телевізор LG">
+            <h2>Телевізор LG</h2>
+            <p>Ціна: 14000 грн</p>
+            <button onclick="addToCart('Телевізор LG', 14000)">Додати у корзину</button>
+        </div>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
