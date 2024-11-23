@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cyber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta name="description" content="Сайт з технікою">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <p class="close-button">&times;</p>
+            <h2>Контакти</h2>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@example.com</p>
+            <p>Адреса: Київ, вул. Хрещатик, 1</p>
+        </div>
+    </div>
+    <header>
+        <a href="index.html" class="logo"><img src="img/Logo.png" alt="img"></a>
+        <nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+            </div>
+            <div class="nav-block">
+                <ul>
+                    <li><a href="index.html" >Головна</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="#" id="contact-btn">Контакти</a></li>
+                    <li><a href="#" class="main">Каталог</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-regular fa-user fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="href-section">
+        <p>Головна</p>
+        <i class="fa-solid fa-angle-right fa-lg" style="color: #A4A4A4;"></i>
+        <p>Каталог</p>
+        <i class="fa-solid fa-angle-right fa-lg" style="color: #A4A4A4;"></i>
+        <p>Смартфони</p>
+    </div>
+    <div class="catalog">
+        <aside class="filters">
+            <h3>Бренд
+                <span class="toggle-icon" onclick="toggleFilter('brand')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="brand" class="filter-list">
+                <li><input type="checkbox" id="apple"><label for="apple"> Apple 110</label></li>
+                <li><input type="checkbox" id="samsung"><label for="samsung"> Samsung 125</label></li>
+                <li><input type="checkbox" id="xiaomi"><label for="xiaomi"> Xiaomi 86</label></li>
+                <li><input type="checkbox" id="poco"><label for="poco"> Poco 44</label></li>
+                <li><input type="checkbox" id="oppo"><label for="oppo"> OPPO 36</label></li>
+                <li><input type="checkbox" id="honor"><label for="honor"> Honor 10</label></li>
+                <li><input type="checkbox" id="motorola"><label for="motorola"> Motorola 34</label></li>
+                <li><input type="checkbox" id="nokia"><label for="nokia"> Nokia 22</label></li>
+                <li><input type="checkbox" id="realme"><label for="realme"> Realme 35</label></li>
+            </ul>
+            <h3>Ємність акумулятора
+                <span class="toggle-icon" onclick="toggleFilter('battery')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="battery" class="filter-list">
+            </ul>
+            <h3>Тип екрана
+                <span class="toggle-icon" onclick="toggleFilter('screen')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="screen" class="filter-list">
+            </ul>
+            <h3>Діагональ екрану
+                <span class="toggle-icon" onclick="toggleFilter('diagonal')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="diagonal" class="filter-list">
+            </ul>
+            <h3>Клас захисту
+                <span class="toggle-icon" onclick="toggleFilter('save')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="save" class="filter-list">
+            </ul>
+            <h3>Вбудована пам'ять
+                <span class="toggle-icon" onclick="toggleFilter('memory')"><i class="fa-solid fa-angle-down"></i></span>
+            </h3>
+            <ul id="memory" class="filter-list">
+            </ul>
+        </aside>
+        <div class="products-container">
+            <div class="controls">
+                <p>Вибрані продукти: <strong>85</strong></p>
+                <select>
+                    <option>За спаданням</option>
+                    <option>За зростанням</option>
+                    <option>За популярністю</option>
+                </select>
+            </div>
+            <div class="products-grid" id="products-grid-two"></div>
+            <div class="pagination">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>....</span>
+                <a href="#">12</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div>
+                    <img src="img/Logo-white.png" alt="img">
+                    <p>cyber - найкращі гаджети</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="column">
+                    <h3>Послуги</h3>
+                    <ul>
+                        <li><a href="#">Бонусна програма</a></li>
+                        <li><a href="#">Подарункові карти</a></li>
+                        <li><a href="#">Кредит і оплата</a></li>
+                        <li><a href="#">Сервісні договори</a></li>
+                        <li><a href="#">Безготівковий рахунок</a></li>
+                        <li><a href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Допомога покупцеві</h3>
+                    <ul>
+                        <li><a href="#">Знайти замовлення</a></li>
+                        <li><a href="#">Умови доставки</a></li>
+                        <li><a href="#">Обмін та повернення товару</a></li>
+                        <li><a href="#">Гарантія</a></li>
+                        <li><a href="#">Часті запитання</a></li>
+                        <li><a href="#">Правила користування сайтом</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

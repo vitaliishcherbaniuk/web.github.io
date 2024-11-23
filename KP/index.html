@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cyber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta name="description" content="Сайт з технікою">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <p class="close-button">&times;</p>
+            <h2>Контакти</h2>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@example.com</p>
+            <p>Адреса: Київ, вул. Хрещатик, 1</p>
+        </div>
+    </div>
+    <header>
+        <a href="#" class="logo"><img src="img/Logo.png" alt="img"></a>
+        <nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+            </div>
+            <div class="nav-block">
+                <ul>
+                    <li><a href="#" class="main">Головна</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="#" id="contact-btn">Контакти</a></li>
+                    <li><a href="products.html">Каталог</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-regular fa-user fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main class="main-section">
+        <section class="hero">
+            <p><strong>Pro.За межами.</strong></p>
+            <h1>iPhone 14 <strong>Pro</strong></h1>
+            <p>Створений, щоб змінити все на краще. Для всіх.</p>
+            <a href="#">Купити зараз</a>
+        </section>
+        <div class="image-wrapper">
+            <img src="img/IphoneImage.png" alt="iPhone 14 Pro">
+        </div>
+    </main>
+    <section class="section-products">
+        <div class="product-block">
+            <div class="product ps5">
+                <img src="img/PlayStation.png" alt="img">
+                <div>
+                    <h2>Playstation 5</h2>
+                    <p>Неймовірно потужні CPUs, GPUs, та SSD з інтегрованим I/O змінять ваші
+                        враження від PlayStation.</p>
+                </div>
+            </div>
+            <div class="product-block-bottom">
+                <div class="product airpods">
+                    <img src="img/headp.png" alt="img">
+                    <div>
+                        <h2>Apple AirPods <strong>Max</strong></h2>
+                        <p>Обчислювальне аудіо. Слухай, це потужно.</p>
+                    </div>
+                </div>
+                <div class="product vision">
+                    <img src="img/vision.png" alt="img">
+                    <div>
+                        <h2>Apple Vision <strong>Pro</strong></h2>
+                        <p>Захоплюючий спосіб відчути розваги.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product macbook">
+            <div>
+                <h2>Macbook <strong>Air</strong></h2>
+                <p>Новий 15-дюймовий MacBook Air звільняє місце для того, що вам
+                    подобається, завдяки просторому дисплею Liquid Retina.</p>
+                <a href="#" class="shop-now">Купити зараз</a>
+            </div>
+            <img src="img/MacBook%20Pro%2014.png" alt="img">
+        </div>
+    </section>
+    <section class="categories">
+        <div class="category-text">
+            <h2>Перегляд за категоріями</h2>
+            <div>
+                <div class="slider-btn prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="slider-btn next"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+        </div>
+        <div class="category-slider"></div>
+    </section>
+    <div class="products">
+        <div class="container">
+            <div class="products-nav">
+                <a class="nav-link active">Нові надходження</a>
+                <a class="nav-link">Бестселер</a>
+                <a class="nav-link">Рекомендовані продукти</a>
+            </div>
+            <div class="products-grid">
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card.png" alt="Apple iPhone 14 Pro Max">
+                    <h3 class="product-title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
+                    <p class="product-price">$900</p>
+                    <a href="productone.html" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card2.png" alt="Blackmagic Pocket Cinema Camera 6k">
+                    <h3 class="product-title">Blackmagic Pocket Cinema Camera 6k</h3>
+                    <p class="product-price">$2535</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card3.png" alt="Apple Watch Series 9 GPS">
+                    <h3 class="product-title">Apple Watch Series 9 GPS 41mm Starlight Aluminium</h3>
+                    <p class="product-price">$399</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card4.png" alt="AirPods Max Silver">
+                    <h3 class="product-title">AirPods Max Silver Starlight Aluminium</h3>
+                    <p class="product-price">$549</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card5.png" alt="Samsung Galaxy Watch6">
+                    <h3 class="product-title">Samsung Galaxy Watch6 Classic 47mm Black</h3>
+                    <p class="product-price">$369</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card6.png" alt="Galaxy Z Fold5">
+                    <h3 class="product-title">Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</h3>
+                    <p class="product-price">$1799</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card7.png" alt="Galaxy Buds FE">
+                    <h3 class="product-title">Galaxy Buds FE Graphite</h3>
+                    <p class="product-price">$99.99</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+                <article class="product-item">
+                    <div><i class="fa-regular fa-heart fa-2xl heart" style="color: #A8A8A8;" onclick="toggleHeartColor(this)"></i></div>
+                    <img src="img/card8.png" alt="Apple iPad 9 10.2">
+                    <h3 class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver</h3>
+                    <p class="product-price">$398</p>
+                    <a href="#" class="buy-now">Купити зараз</a>
+                </article>
+            </div>
+        </div>
+    </div>
+    <section class="section-products-two">
+        <div class="product-two">
+            <img src="img/products.png" alt="Huawei Watch and Earbuds">
+            <div>
+                <h2>Мега продукти</h2>
+                <p>iPad поєднує в собі чудовий 10,2-дюймовий дисплей Retina,
+                    неймовірну продуктивність.</p>
+                <a href="#">Купити зараз</a>
+            </div>
+        </div>
+        <div class="product-two">
+            <img src="img/products2.png" alt="iPad Pro">
+            <div>
+                <h2>iPad Pro</h2>
+                <p>iPad поєднує в собі чудовий 10,2-дюймовий дисплей Retina,
+                    неймовірну продуктивність.</p>
+                <a href="#">Купити зараз</a>
+            </div>
+        </div>
+        <div class="product-two">
+            <img src="img/products3.png" alt="Samsung Galaxy Fold">
+            <div>
+                <h2>Samsung Galaxy</h2>
+                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+                <a href="#">Купити зараз</a>
+            </div>
+        </div>
+        <div class="product-two">
+            <img src="img/products4.png" alt="MacBook Pro">
+            <div>
+                <h2>MacBook Pro</h2>
+                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+                <a href="#">Купити зараз</a>
+            </div>
+        </div>
+    </section>
+    <section class="section-product-month">
+        <div class="category-text">
+            <h2>Товари місяця</h2>
+        </div>
+        <div class="products-grid" id="products-grid">
+
+        </div>
+    </section>
+    <div class="banner">
+        <p>Великий літній <strong>розпродаж</strong></p>
+        <a href="#">До покупок</a>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div>
+                    <img src="img/Logo-white.png" alt="img">
+                    <p>cyber - найкращі гаджети</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="column">
+                    <h3>Послуги</h3>
+                    <ul>
+                        <li><a href="#">Бонусна програма</a></li>
+                        <li><a href="#">Подарункові карти</a></li>
+                        <li><a href="#">Кредит і оплата</a></li>
+                        <li><a href="#">Сервісні договори</a></li>
+                        <li><a href="#">Безготівковий рахунок</a></li>
+                        <li><a href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Допомога покупцеві</h3>
+                    <ul>
+                        <li><a href="#">Знайти замовлення</a></li>
+                        <li><a href="#">Умови доставки</a></li>
+                        <li><a href="#">Обмін та повернення товару</a></li>
+                        <li><a href="#">Гарантія</a></li>
+                        <li><a href="#">Часті запитання</a></li>
+                        <li><a href="#">Правила користування сайтом</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
