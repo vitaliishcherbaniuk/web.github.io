@@ -4,6 +4,7 @@ const cartItemsCount = document.getElementById('cart-items-count');
 const modal = document.getElementById('modal');
 const modalContent = modal.querySelector('.modal-content');
 
+// Завантаження корзини з localStorage
 function loadCart() {
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
@@ -11,13 +12,15 @@ function loadCart() {
     } else {
         cart = [];
     }
-    updateCartCount(); 
+    updateCartCount();
 }
 
+// Оновлення кількості товарів у корзині
 function updateCartCount() {
     cartItemsCount.textContent = cart.length;
 }
 
+// Додавання товару до корзини
 function addToCart(productName, productPrice) {
     const quantity = parseInt(prompt(`Вкажіть кількість для "${productName}":`, 1), 10);
     if (!quantity || quantity <= 0) {
@@ -32,15 +35,17 @@ function addToCart(productName, productPrice) {
         cart.push({ name: productName, price: productPrice, quantity });
     }
 
-    saveCart(); 
+    saveCart();
     alert('Товар додано до корзини!');
     updateCartCount();
 }
 
+// Збереження корзини в localStorage
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// Відображення корзини
 cartIcon.addEventListener('click', () => {
     if (cart.length === 0) {
         modal.classList.remove('hidden');
@@ -50,34 +55,38 @@ cartIcon.addEventListener('click', () => {
     }
 });
 
+// Закриття модального вікна
 modalContent.querySelector('button').addEventListener('click', () => {
     modal.classList.add('hidden');
 });
 
-document.querySelectorAll('.button-active').forEach((button) => {
-    button.addEventListener('click', () => {
-        const productName = button.closest('.article').querySelector('.article-bottom-caption a').textContent.trim();
-        const productPrice = parseFloat(button.closest('.article').querySelector('.price b').textContent);
-        addToCart(productName, productPrice);
+// Додавання обробників до кнопок "У корзину"
+function setupAddToCartButtons() {
+    document.querySelectorAll('.button-active').forEach((button) => {
+        button.addEventListener('click', () => {
+            const productName = button.closest('.article').querySelector('.article-bottom-caption a').textContent.trim();
+            const productPrice = parseFloat(button.closest('.article').querySelector('.price b').textContent);
+            addToCart(productName, productPrice);
+        });
     });
-});
+}
 
-document.addEventListener('DOMContentLoaded', loadCart);
-
+// Завантаження продуктів з JSON
 async function fetchProducts() {
     try {
         const response = await fetch('https://vitaliishcherbaniuk.github.io/web.github.io/pr9/products.json');
         const data = await response.json();
         renderProducts(data.products);
-        document.title = data.pageTitle; 
+        document.title = data.pageTitle; // Встановлення заголовку сторінки
     } catch (error) {
         console.error('Помилка завантаження даних:', error);
     }
 }
 
+// Рендеринг продуктів на сторінку
 function renderProducts(products) {
     const articleWrapper = document.querySelector('.article-wrapper');
-    articleWrapper.innerHTML = ''; 
+    articleWrapper.innerHTML = ''; // Очищення перед рендерингом нових продуктів
 
     products.forEach(product => {
         const productCard = document.createElement('div');
@@ -99,7 +108,11 @@ function renderProducts(products) {
         articleWrapper.appendChild(productCard);
     });
 
-    setupAddToCartButtons();
+    setupAddToCartButtons(); // Додаємо обробники подій до кнопок
 }
 
-document.addEventListener('DOMContentLoaded', fetchProducts);
+// Виконання при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+    fetchProducts();
+});
