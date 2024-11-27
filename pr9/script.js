@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', loadCart);
 
 async function fetchProducts() {
     try {
-        const response = await fetch('https://vitaliishcherbaniuk.github.io/web.github.io/PR9/products.json');
+        const response = await fetch('https://vitaliishcherbaniuk.github.io/web.github.io/pr9/products.json');
         const data = await response.json();
         renderProducts(data.products);
         document.title = data.pageTitle; 
