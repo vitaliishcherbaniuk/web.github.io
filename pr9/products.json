@@ -1,41 +1,53 @@
 {
-    "pageTitle": "Магазин телевізорів",
+    "pageTitle": "Лабораторна робота №9",
     "products": [
       {
         "name": "Akai 70",
+        "category": "Телевізори",
         "price": 39299,
-        "image": "1.webp",
-        "status": "soon"
+        "image": "image/1.webp",
+        "link": "",
+        "status": "Незабаром у продажі"
       },
       {
         "name": "Xiaomi TV A 50",
+        "category": "Телевізори",
         "price": 21111,
-        "image": "2.webp",
-        "status": "available"
+        "image": "image/2.webp",
+        "link": "",
+        "status": "У корзину"
       },
       {
         "name": "Philips 65",
+        "category": "Телевізори",
         "price": 32575,
-        "image": "3.webp",
-        "status": "available"
+        "image": "image/3.webp",
+        "link": "",
+        "status": "У корзину"
       },
       {
         "name": "Samsung TV 4K 40",
+        "category": "Телевізори",
         "price": 11999,
-        "image": "4.webp",
-        "status": "available"
+        "image": "image/4.webp",
+        "link": "",
+        "status": "У корзину"
       },
       {
         "name": "Sony Bravia 55",
+        "category": "Телевізори",
         "price": 45999,
-        "image": "5.webp",
-        "status": "soon"
+        "image": "image/5.webp",
+        "link": "",
+        "status": "У корзину"
       },
       {
         "name": "LG OLED 48",
+        "category": "Телевізори",
         "price": 37999,
-        "image": "6.webp",
-        "status": "available"
+        "image": "image/6.webp",
+        "link": "",
+        "status": "У корзину"
       }
     ]
   }
