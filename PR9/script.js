@@ -6,7 +6,7 @@ const modalContent = modal.querySelector('.modal-content');
 const productContainer = document.querySelector('.article-wrapper');
 
 // Завантаження даних із JSON
-fetch('https://your-username.github.io/your-repository/products.json') // Замість "your-username" та "your-repository" вкажіть ваші дані
+fetch('https://vitaliishcherbaniuk.github.io/web.github.io/PR9/products.json') // Замість "your-username" та "your-repository" вкажіть ваші дані
     .then(response => response.json())
     .then(data => {
         document.title = data.pageTitle; // Оновлення заголовка сторінки
