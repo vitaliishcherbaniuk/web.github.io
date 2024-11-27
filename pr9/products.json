@@ -5,7 +5,7 @@
         "name": "Akai 70",
         "category": "Телевізори",
         "price": 39299,
-        "image": "image/1.webp",
+        "image": "images/1.webp",
         "link": "",
         "status": "Незабаром у продажі"
       },
@@ -13,7 +13,7 @@
         "name": "Xiaomi TV A 50",
         "category": "Телевізори",
         "price": 21111,
-        "image": "image/2.webp",
+        "image": "images/2.webp",
         "link": "",
         "status": "У корзину"
       },
@@ -21,7 +21,7 @@
         "name": "Philips 65",
         "category": "Телевізори",
         "price": 32575,
-        "image": "image/3.webp",
+        "image": "images/3.webp",
         "link": "",
         "status": "У корзину"
       },
@@ -29,7 +29,7 @@
         "name": "Samsung TV 4K 40",
         "category": "Телевізори",
         "price": 11999,
-        "image": "image/4.webp",
+        "image": "images/4.webp",
         "link": "",
         "status": "У корзину"
       },
@@ -37,7 +37,7 @@
         "name": "Sony Bravia 55",
         "category": "Телевізори",
         "price": 45999,
-        "image": "image/5.webp",
+        "image": "images/5.webp",
         "link": "",
         "status": "У корзину"
       },
@@ -45,7 +45,7 @@
         "name": "LG OLED 48",
         "category": "Телевізори",
         "price": 37999,
-        "image": "image/6.webp",
+        "image": "images/6.webp",
         "link": "",
         "status": "У корзину"
       }
