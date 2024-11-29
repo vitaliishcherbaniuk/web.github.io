@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Практична робота №9</title>
+</head>
+
+<body>
+    <div id="language-modal" class="modal hidden">
+        <div class="modal-content">
+            <p data-i18n="modalChooseLanguage">Оберіть мову для перегляду сторінки:</p>
+            <button class="language-button" data-lang="ua">Українська</button>
+            <button class="language-button" data-lang="en">English</button>
+        </div>
+    </div>
+    <select id="language-switcher">
+        <option value="ua">Українська</option>
+        <option value="en">English</option>
+    </select>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p>Корзина пуста</p>
+            <button>Закрити</button>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <h2 class="page-header">Обов'язково додайте своє замовлення</h2>
+        <div class="cart" id="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="cart-items-count" class="cart-items-count">0</div>
+        </div>
+        <div class="article-wrapper"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.4/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.3/i18nextHttpBackend.min.js"></script>
+</body>
+
+</html>
