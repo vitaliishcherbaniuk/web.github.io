@@ -32,22 +32,6 @@
         "image": "images/4.webp",
         "link": "",
         "status": "У корзину"
-      },
-      {
-        "name": "Sony Bravia 55",
-        "category": "Телевізори",
-        "price": 45999,
-        "image": "images/5.webp",
-        "link": "",
-        "status": "У корзину"
-      },
-      {
-        "name": "LG OLED 48",
-        "category": "Телевізори",
-        "price": 37999,
-        "image": "images/6.webp",
-        "link": "",
-        "status": "У корзину"
       }
     ]
   }
