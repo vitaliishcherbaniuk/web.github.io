@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /admin/help.html
+Sitemap: https://vitaliishcherbaniuk.github.io/web.github.io/KP/sitemap.xml
